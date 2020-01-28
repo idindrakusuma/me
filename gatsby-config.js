@@ -17,6 +17,7 @@ module.exports = {
   plugins: [
     'gatsby-plugin-react-helmet-async',
     'gatsby-plugin-emotion',
+    '@bumped-inc/gatsby-plugin-optional-chaining',
     /**
      * Custom config for ESLint
      */
