@@ -3,7 +3,8 @@ import { object } from 'prop-types';
 import { graphql } from 'gatsby';
 import { Helmet } from 'react-helmet-async';
 
-import Button from '@components/Button';
+import Favicon from '@assets/favicon.png';
+import Button from '../components/Button';
 
 /**
  * GraphQL Queries
@@ -31,6 +32,7 @@ function AppIndex({ data }) {
         <meta property="og:title" content={metaData.title} />
         <meta property="og:description" content={metaData.description} />
         <meta property="og:url" content={metaData.siteUrl} />
+        <link rel="icon" href={Favicon} />
       </Helmet>
     );
   };
