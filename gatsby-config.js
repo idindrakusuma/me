@@ -43,6 +43,7 @@ module.exports = {
           '@components': 'src/components',
           '@helpers': 'src/helpers',
           '@pages': 'src/pages',
+          '@assets': 'src/assets',
           '@': 'src',
         },
       },

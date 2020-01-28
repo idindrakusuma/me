@@ -15,6 +15,7 @@ module.exports = {
     '@helpers/(.*)$': '<rootDir>/src/helpers/$1',
     '@components/(.*)$': '<rootDir>/src/components/$1',
     '@pages/(.*)$': '<rootDir>/src/pages/$1',
+    '@aseets/(.*)$': '<rootDir>/src/assets/$1',
   },
   testPathIgnorePatterns: ['node_modules', '\\.cache', '<rootDir>.*/public'],
   transformIgnorePatterns: ['node_modules/(?!(gatsby)/)'],
