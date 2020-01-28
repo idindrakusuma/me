@@ -32,5 +32,19 @@ module.exports = {
         },
       },
     },
+    /**
+     * Custom resolver for our modules
+     */
+    {
+      resolve: 'gatsby-alias-imports',
+      options: {
+        aliases: {
+          '@components': 'src/components',
+          '@helpers': 'src/helpers',
+          '@pages': 'src/pages',
+          '@': 'src',
+        },
+      },
+    },
   ],
 };
