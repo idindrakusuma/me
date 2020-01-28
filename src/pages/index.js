@@ -38,7 +38,7 @@ function AppIndex({ data }) {
   return (
     <div>
       {renderMetadata()}
-      <h1>Hi, I'm Indra Kusuma</h1>
+      <h1>Hi, I&apos;m Indra Kusuma</h1>
       <Button label="Click Me" />
     </div>
   );
