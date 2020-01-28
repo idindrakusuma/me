@@ -25,6 +25,9 @@
     "react-helmet-async": "^1.0.4"
   },
   "devDependencies": {
+    "@babel/core": "^7.8.3",
+    "@babel/plugin-proposal-optional-chaining": "^7.8.3",
+    "@bumped-inc/gatsby-plugin-optional-chaining": "^1.0.0",
     "@testing-library/jest-dom": "^5.0.2",
     "@testing-library/react": "^9.4.0",
     "babel-eslint": "^10.0.3",
