@@ -1,6 +1,6 @@
 import { css } from '@emotion/core';
 
-export const btnStyles = css`
+export const styButton = css`
   display: block;
   background: #0c0c0c;
   color: #fff;

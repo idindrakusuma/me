@@ -4,7 +4,12 @@ import { graphql } from 'gatsby';
 import { Helmet } from 'react-helmet-async';
 
 import Favicon from '@assets/favicon.png';
-import Button from '../components/Button';
+import Button from '@components/Button';
+import Title from '@components/Title';
+import Card from '@components/Card';
+import Divider from '@components/Divider';
+
+import { styNormalizer } from './styles';
 
 /**
  * GraphQL Queries
@@ -33,15 +38,23 @@ function AppIndex({ data }) {
         <meta property="og:description" content={metaData.description} />
         <meta property="og:url" content={metaData.siteUrl} />
         <link rel="icon" href={Favicon} />
+        <link
+          href="https://fonts.googleapis.com/css?family=Montserrat:400,700|Roboto:400,700&display=swap"
+          rel="stylesheet"
+        />
       </Helmet>
     );
   };
 
   return (
-    <div>
+    <div css={styNormalizer}>
       {renderMetadata()}
       <h1>Hi, I&apos;m Indra Kusuma</h1>
       <Button label="Click Me" />
+      <Title text="About me" margin="16px" />
+
+      <Divider />
+      <Card title="with title">Hello</Card>
     </div>
   );
 }
