@@ -9,7 +9,7 @@ import Title from '@components/Title';
 import Card from '@components/Card';
 import Divider from '@components/Divider';
 
-import { styNormalizer } from './styles';
+import { styNormalizer } from '../styles/styles';
 
 /**
  * GraphQL Queries
