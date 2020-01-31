@@ -1,7 +1,7 @@
 {
-  "name": "gatsby-starter-hello-world",
+  "name": "indra-kusuma-web-profile",
   "private": true,
-  "description": "A simplified bare-bones starter for Gatsby",
+  "description": "a simple web profile based on gatsby js",
   "version": "0.1.0",
   "license": "MIT",
   "scripts": {
@@ -65,8 +65,7 @@
   "lint-staged": {
     "*.js": [
       "prettier --config .prettierrc --write",
-      "eslint --fix",
-      "git add"
+      "eslint --fix"
     ]
   }
 }
