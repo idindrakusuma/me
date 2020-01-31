@@ -9,7 +9,7 @@ module.exports = {
    * My configuration for Meta Data
    */
   siteMetadata: {
-    title: "Hi, I'm Indra!",
+    title: 'Indra Kusuma personal page',
     siteUrl: 'https://indrakusuma.web.id/me',
     desription:
       "Hi, My name is Indra Kusuma. Currently, I work at Tokopedia as Software Engineer Web Platform. I'm very passionate in Web Development. Don't be shy to say hi to me! because, maybe we can work do something good in the future! :D",

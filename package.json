@@ -11,7 +11,8 @@
     "start": "npm run develop",
     "serve": "gatsby serve",
     "clean": "gatsby clean",
-    "test": "jest"
+    "test": "jest",
+    "lint": "lint-staged"
   },
   "dependencies": {
     "@emotion/core": "^10.0.27",
