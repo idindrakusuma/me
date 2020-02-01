@@ -1,7 +1,7 @@
 import { css } from '@emotion/core';
 
 export const styWrapper = css`
-  margin: 30vh auto;
+  margin: 25vh auto;
 `;
 
 export const styBtnWelcome = css`

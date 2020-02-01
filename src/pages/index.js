@@ -1,12 +1,17 @@
 import React from 'react';
-import Layout from '@components/Layout';
+import { navigate } from 'gatsby';
 
+import Layout from '@components/Layout';
 import Button from '@components/Button';
 import useRandomQuotes from '@/hooks/useRandomQuotes';
 import { styWelcomeWrapper, styWrapper, styBtnWelcome } from '@/styles';
 
 function AppIndex() {
   const { loading, data } = useRandomQuotes();
+
+  const handleClickButton = () => {
+    navigate('/about');
+  };
 
   const renderQuote = () => {
     if (loading) return <h2>Loading...</h2>;
@@ -25,7 +30,7 @@ function AppIndex() {
     <Layout title="Welcome">
       <div css={styWrapper}>
         <div css={styWelcomeWrapper}>{renderQuote()}</div>
-        <Button label="Let me know who is Indra.." className={styBtnWelcome} />
+        <Button label="Let me know who is Indra.." className={styBtnWelcome} onClick={handleClickButton} />
       </div>
     </Layout>
   );
