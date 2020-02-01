@@ -23,14 +23,8 @@ function Header({ title }) {
         href="https://user-images.githubusercontent.com/10141928/38850599-58f599aa-423c-11e8-82f8-8ea00ad5a364.png"
       />
       <link
-        href="https://fonts.googleapis.com/css?family=Montserrat:400,700|Roboto:400,700&display=swap"
+        href="https://fonts.googleapis.com/css?family=Montserrat:400,400i,700|Roboto+Slab:400,700&display=swap"
         rel="stylesheet"
-      />
-      <link
-        href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
-        rel="stylesheet"
-        integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN"
-        crossOrigin="anonymous"
       />
       <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" />
     </Helmet>

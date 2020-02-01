@@ -9,7 +9,10 @@
     "object-curly-newline": "off",
     "operator-linebreak": "off",
     "react/no-array-index-key": "off",
-    "arrow-body-style": "off"
+    "arrow-body-style": "off",
+    "arrow-parens": "off",
+    "react/jsx-one-expression-per-line": "off",
+    "react/no-danger": "off"
   },
   "settings": {
     "import/resolver": {

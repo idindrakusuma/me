@@ -1,7 +1,7 @@
 import { css } from '@emotion/core';
 
 export const styCardWrapper = css`
-  padding: 60px 70px;
+  padding: 60px;
   position: relative;
   border-bottom: solid 1px #eee;
   background: #fff;
@@ -9,6 +9,6 @@ export const styCardWrapper = css`
 `;
 
 export const styHeaderWrapper = css`
-  margin-bottom: 60px;
+  margin-bottom: 20px;
   position: relative;
 `;
