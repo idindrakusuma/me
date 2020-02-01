@@ -32,4 +32,4 @@ Menus.defaultProps = {
   listMenu: [],
 };
 
-export default Menus;
+export default React.memo(Menus);

@@ -23,4 +23,4 @@ Skills.propTypes = {
   ability: number.isRequired,
 };
 
-export default Skills;
+export default React.memo(Skills);

@@ -14,7 +14,7 @@ function AppIndex() {
   };
 
   const renderQuote = () => {
-    if (loading) return <h2>Loading...</h2>;
+    if (loading) return <h2>✨Preparing something special for you..</h2>;
 
     if (!data.content) return null;
 
@@ -27,7 +27,7 @@ function AppIndex() {
   };
 
   return (
-    <Layout title="Welcome">
+    <Layout title="Welcome" noWave={false}>
       <div css={styWrapper}>
         <div css={styWelcomeWrapper}>{renderQuote()}</div>
         <Button label="Let me know who is Indra.." className={styBtnWelcome} onClick={handleClickButton} />
