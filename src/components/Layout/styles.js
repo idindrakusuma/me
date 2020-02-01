@@ -1,5 +1,6 @@
 import styled from '@emotion/styled';
 import { css } from '@emotion/core';
+import WaveSVG from '@assets/wave.svg';
 import { textColor } from '@/constants/color';
 
 const WIDTH_MD = '1024px';
@@ -69,6 +70,17 @@ export const MainPanel = styled.div`
   background-color: #fff;
   width: 740px;
   min-height: 100vh;
+  ${props => {
+    if (!props.noWave) {
+      return `
+        background-image: url(${WaveSVG});
+        background-repeat: no-repeat;
+        background-position: bottom;
+      `;
+    }
+
+    return '';
+  }}
 
   @media (min-width: 1025px) {
     float: right;

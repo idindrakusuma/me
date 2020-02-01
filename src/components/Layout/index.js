@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { string, node } from 'prop-types';
+import { string, node, bool } from 'prop-types';
 
 import Header from '@components/Header';
 import Sidebar from '@components/Sidebar';
@@ -11,7 +11,7 @@ import { Wrapper, MainPanel, WrapperBody } from './styles';
 
 const MINIMUM_VALUE = 1023;
 
-function Layout({ title, children }) {
+function Layout({ title, children, noWave }) {
   const [isShowWidth, setIsShowWidth] = useState(true);
 
   const updateWidth = () => {
@@ -37,7 +37,7 @@ function Layout({ title, children }) {
       <Header title={title} />
       <Wrapper>
         {isShowWidth && <Sidebar socialMediaData={socialMediaData} listMenu={listMenuData} />}
-        <MainPanel>{children}</MainPanel>
+        <MainPanel noWave={noWave}>{children}</MainPanel>
       </Wrapper>
     </WrapperBody>
   );
@@ -46,10 +46,12 @@ function Layout({ title, children }) {
 Layout.propTypes = {
   children: node.isRequired,
   title: string,
+  noWave: bool,
 };
 
 Layout.defaultProps = {
   title: '',
+  noWave: true,
 };
 
 export default Layout;

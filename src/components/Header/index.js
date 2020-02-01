@@ -39,4 +39,4 @@ Header.defaultProps = {
   title: '',
 };
 
-export default Header;
+export default React.memo(Header);

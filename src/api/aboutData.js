@@ -10,7 +10,7 @@ export const aboutMe = [
   {
     question: 'Email',
     answer: 'id.indrakusuma@gmail.com',
-    link: '',
+    link: 'mailto:id.indrakusuma@gmail.com?Subject=Hi%20Indra',
     icon: FaCommentDots,
   },
   {

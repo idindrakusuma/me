@@ -42,7 +42,7 @@ export const pullRight = css`
 `;
 
 export const progress = css`
-  height: 1px;
+  height: 4px;
   margin: 20px 0;
   background-color: #e0e0e0;
   border-radius: 0;
@@ -57,6 +57,6 @@ export const ProgressBar = styled.div`
   font-size: 12px;
   line-height: 20px;
   color: #fff;
-  background-color: #0c0c0c;
+  background: linear-gradient(to right, #000046, #1cb5e0);
   box-shadow: none;
 `;

@@ -3,46 +3,13 @@ import { object, string, arrayOf } from 'prop-types';
 
 import IndraKusumaProfilePhoto from '@assets/indra-new.jpg';
 import ListMenu from './ListMenu';
-import { avatar, name, socialMedia, copyright, wrapper } from './styles';
+import UserName from './UserName';
+import ImageProfile from './ImageProfile';
+import ListSocialMedia from './ListSocialMedia';
+
+import { copyright, wrapper } from './styles';
 
 function Sidebar({ copyrightText, fullName, listMenu, socialMediaData, title }) {
-  const renderPhotoProfile = () => {
-    return (
-      <div css={avatar}>
-        <img src={IndraKusumaProfilePhoto} alt="Indra Kusuma" />
-      </div>
-    );
-  };
-
-  const renderName = () => {
-    return (
-      <div css={name}>
-        <h1>{fullName}</h1>
-        <span>{title}</span>
-      </div>
-    );
-  };
-
-  const renderSocialMedia = () => {
-    if (!socialMediaData) {
-      return null;
-    }
-
-    return (
-      <div css={socialMedia}>
-        <ul>
-          {socialMediaData.map((element, index) => (
-            <li key={index}>
-              <a href={element.href} target="_blank" rel="noopener noreferrer" title={element.title}>
-                <element.icon />
-              </a>
-            </li>
-          ))}
-        </ul>
-      </div>
-    );
-  };
-
   const renderCopyRight = () => {
     return (
       <div css={copyright}>
@@ -53,9 +20,9 @@ function Sidebar({ copyrightText, fullName, listMenu, socialMediaData, title }) 
 
   return (
     <div css={wrapper}>
-      {renderPhotoProfile()}
-      {renderName()}
-      {renderSocialMedia()}
+      <ImageProfile urlPhoto={IndraKusumaProfilePhoto} />
+      <UserName title={title} fullName={fullName} />
+      <ListSocialMedia socialMediaData={socialMediaData} />
       <ListMenu listMenu={listMenu} />
       {renderCopyRight()}
     </div>
@@ -78,4 +45,4 @@ Sidebar.defaultProps = {
   title: 'Professional Web Developer',
 };
 
-export default Sidebar;
+export default React.memo(Sidebar);
