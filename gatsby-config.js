@@ -5,6 +5,7 @@
  */
 
 module.exports = {
+  pathPrefix: '/me',
   /**
    * My configuration for Meta Data
    */
