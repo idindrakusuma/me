@@ -35,7 +35,7 @@ function Sidebar({ copyrightText, fullName, listMenu, socialMediaData, title }) 
           {socialMediaData.map((element, index) => (
             <li key={index}>
               <a href={element.href} target="_blank" rel="noopener noreferrer" title={element.title}>
-                <i className={element.icon} />
+                <element.icon />
               </a>
             </li>
           ))}
