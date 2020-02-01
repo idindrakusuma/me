@@ -1,13 +1,14 @@
 import React from 'react';
+import { string, bool } from 'prop-types';
 import { Helmet } from 'react-helmet-async';
 
 import Favicon from '@assets/favicon.png';
-import { string } from 'prop-types';
+import { backgroundWrapper } from './styles';
 
 const DESC =
   'Hello! My name is Indra Kusuma. I am an optimistic and type of person of learn by doing who have an interest in Software Engineering, specifically about Web Development.';
 
-function Header({ title }) {
+function Header({ title, background }) {
   const finalTitle = `${title} | Indra Kusuma Profile Page 😎`;
 
   return (
@@ -25,16 +26,24 @@ function Header({ title }) {
         href="https://fonts.googleapis.com/css?family=Montserrat:400,700|Roboto:400,700&display=swap"
         rel="stylesheet"
       />
+      <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+      />
+
+      {background && <body style={backgroundWrapper} />}
     </Helmet>
   );
 }
 
 Header.propTypes = {
   title: string,
+  background: bool,
 };
 
 Header.defaultProps = {
   title: '',
+  background: true,
 };
 
 export default Header;
