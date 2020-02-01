@@ -71,6 +71,11 @@ export const copyright = css`
     font-weight: 200;
     font-size: 12px;
   }
+
+  @media only screen and (max-height: 600px) {
+    bottom: -18px;
+    position: relative;
+  }
 `;
 
 export const wrapper = css`
