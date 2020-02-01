@@ -7,7 +7,7 @@ import Sidebar from '@components/Sidebar';
 import socialMediaData from '@/api/socialMediaData';
 import listMenuData from '@/api/listMenuData';
 
-import { Wrapper, MainPanel } from './styles';
+import { Wrapper, MainPanel, WrapperBody } from './styles';
 
 const MINIMUM_VALUE = 1023;
 
@@ -33,13 +33,13 @@ function Layout({ title, children }) {
   }, []);
 
   return (
-    <>
+    <WrapperBody>
       <Header title={title} />
       <Wrapper>
         {isShowWidth && <Sidebar socialMediaData={socialMediaData} listMenu={listMenuData} />}
         <MainPanel>{children}</MainPanel>
       </Wrapper>
-    </>
+    </WrapperBody>
   );
 }
 

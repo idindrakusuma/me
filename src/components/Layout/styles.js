@@ -4,6 +4,14 @@ import { css } from '@emotion/core';
 const WIDTH_MD = '1024px';
 const WIDTH_SM = '500px';
 
+export const WrapperBody = styled.div`
+  background: #000046;
+  background: -webkit-linear-gradient(to right, #000046, #1cb5e0);
+  background: linear-gradient(to right, #000046, #1cb5e0);
+  overflow-x: hidden;
+  margin: 0;
+`;
+
 export const Wrapper = styled.div`
   * {
     font-family: 'Roboto Slab', serif;
