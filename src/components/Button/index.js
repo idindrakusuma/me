@@ -4,9 +4,9 @@ import noop from '@helpers/noop';
 
 import { styButton } from './styles';
 
-function Button({ onClick, label, propOptions }) {
+function Button({ onClick, label, className, propOptions }) {
   return (
-    <button css={styButton} type="button" aria-label={label} onClick={onClick} {...propOptions}>
+    <button css={[className, styButton]} type="button" aria-label={label} onClick={onClick} {...propOptions}>
       {label}
     </button>
   );
@@ -14,12 +14,14 @@ function Button({ onClick, label, propOptions }) {
 
 Button.propTypes = {
   label: string,
+  className: object,
   propOptions: object,
   onClick: func,
 };
 
 Button.defaultProps = {
   label: '',
+  className: {},
   propOptions: {},
   onClick: noop,
 };

@@ -1,8 +1,34 @@
 import React from 'react';
 import Layout from '@components/Layout';
 
+import Button from '@components/Button';
+import useRandomQuotes from '@/hooks/useRandomQuotes';
+import { styWelcomeWrapper, styWrapper, styBtnWelcome } from '@/styles';
+
 function AppIndex() {
-  return <Layout title="Welcome">Welcome</Layout>;
+  const { loading, data } = useRandomQuotes();
+
+  const renderQuote = () => {
+    if (loading) return <h2>Loading...</h2>;
+
+    if (!data.content) return null;
+
+    return (
+      <>
+        <h2>&quot;{data.content}&quot;</h2>
+        <span>{`${data.author} via Quotable`}</span>
+      </>
+    );
+  };
+
+  return (
+    <Layout title="Welcome">
+      <div css={styWrapper}>
+        <div css={styWelcomeWrapper}>{renderQuote()}</div>
+        <Button label="Let me know who is Indra.." className={styBtnWelcome} />
+      </div>
+    </Layout>
+  );
 }
 
 export default AppIndex;
