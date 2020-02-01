@@ -1,5 +1,6 @@
 import styled from '@emotion/styled';
 import { css } from '@emotion/core';
+import { textColor } from '@/constants/color';
 
 const WIDTH_MD = '1024px';
 const WIDTH_SM = '500px';
@@ -145,6 +146,7 @@ export const colXs12 = css`
 /* Style for About */
 export const intro = css`
   font-size: 14px;
+  font-family: 'montserrat', sans-serif;
   font-weight: 300;
   line-height: 1.5;
   color: #2c2c2c;
@@ -163,7 +165,7 @@ export const info = css`
     }
 
     a {
-      color: #0c0c0c;
+      color: ${textColor};
       text-decoration: none;
     }
 

@@ -1,8 +1,7 @@
 import React from 'react';
 import { object, string, arrayOf } from 'prop-types';
 
-import IndraKusumaProfilePhoto from '@assets/indrakusuma.jpg';
-
+import IndraKusumaProfilePhoto from '@assets/indra-new.jpg';
 import ListMenu from './ListMenu';
 import { avatar, name, socialMedia, copyright, wrapper } from './styles';
 
