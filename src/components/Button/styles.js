@@ -12,3 +12,7 @@ export const styButton = css`
     background: linear-gradient(to right, #2b32b2, #1488cc);
   }
 `;
+
+export const stySmall = css`
+  font-size: 12px;
+`;

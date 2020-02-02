@@ -16,7 +16,7 @@ function usePosts(limit = 3) {
 
       finalResult.push({
         title: item.title,
-        permalink: item.permalink,
+        link: item.permalink,
         desc: item.excerpt,
       });
 
