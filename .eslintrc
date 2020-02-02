@@ -13,7 +13,8 @@
     "arrow-parens": "off",
     "react/jsx-one-expression-per-line": "off",
     "react/no-danger": "off",
-    "jsx-a11y/accessible-emoji": "off"
+    "jsx-a11y/accessible-emoji": "off",
+    "max-len": "off"
   },
   "settings": {
     "import/resolver": {
