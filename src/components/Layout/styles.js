@@ -163,6 +163,10 @@ export const intro = css`
   line-height: 1.5;
   color: #2c2c2c;
   margin: 20px 0;
+
+  a {
+    color: #2c2c2c;
+  }
 `;
 
 export const info = css`
