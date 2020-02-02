@@ -1,4 +1,4 @@
-import { css } from '@emotion/core';
+import { css, keyframes } from '@emotion/core';
 
 export const styWrapper = css`
   margin: 25vh auto;
@@ -55,5 +55,77 @@ export const styWelcomeWrapper = css`
     margin-top: 10px;
     font-family: 'roboto slab', serif;
     font-weight: 300;
+  }
+`;
+
+/**
+ * Style for contact page
+ * */
+export const styText = css`
+  p {
+    line-height: 28px;
+    color: #2c2c2c;
+    font-size: 14px;
+    font-family: 'montserrat', sans-serif;
+  }
+
+  a {
+    color: #2c2c2c;
+  }
+`;
+
+const wave = keyframes`
+  0% {
+    transform: rotate(0deg);
+  }
+
+  10% {
+    transform: rotate(-10deg);
+  }
+
+  20% {
+    transform: rotate(12deg);
+  }
+
+  30% {
+    transform: rotate(-10deg);
+  }
+
+  40% {
+    transform: rotate(9deg);
+  }
+
+  50% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(0deg);
+  }
+`;
+
+export const styContactSocMed = css`
+  ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+
+  li {
+    display: inline-block;
+    padding: 0 10px 0 0;
+
+    &:hover {
+      transform-origin: 70% 70%;
+      animation: ${wave} 2.5s ease infinite;
+    }
+  }
+
+  a {
+    font-size: 30px;
+  }
+
+  @media only screen and (max-height: 600px) {
+    margin: 15px 0;
   }
 `;
