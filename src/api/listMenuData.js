@@ -16,6 +16,10 @@ const ListMenuData = [
     name: 'Works',
   },
   {
+    href: '/blog',
+    name: 'Blog',
+  },
+  {
     href: '/contact',
     name: 'Contact',
   },
