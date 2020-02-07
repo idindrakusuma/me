@@ -7,9 +7,15 @@ import data from '@/api/resumeData';
 
 function ResumePage() {
   const renderEvents = () => {
-    return data.map(event => {
+    return data.map((event, index) => {
       return (
-        <Event interval={event.interval} title={event.title} subtitle={event.subtitle} showIcon={event.icon}>
+        <Event
+          key={index}
+          interval={event.interval}
+          title={event.title}
+          subtitle={event.subtitle}
+          showIcon={event.icon}
+        >
           <div dangerouslySetInnerHTML={{ __html: event.desc }} />
         </Event>
       );

@@ -14,7 +14,8 @@
     "react/jsx-one-expression-per-line": "off",
     "react/no-danger": "off",
     "jsx-a11y/accessible-emoji": "off",
-    "max-len": "off"
+    "max-len": "off",
+    "jsx-a11y/mouse-events-have-key-events": "off"
   },
   "settings": {
     "import/resolver": {
