@@ -14,7 +14,7 @@ function WorksPage() {
 
     if (data.length === 0) return null;
 
-    return data.map(item => <Post title={item.title} desc={item.desc} link={item.link} />);
+    return data.map((item, index) => <Post key={index} title={item.title} desc={item.desc} link={item.link} />);
   };
 
   return (
