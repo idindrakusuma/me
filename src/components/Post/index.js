@@ -23,7 +23,9 @@ function Post({ title, desc, link }) {
       </h3>
       <div className="description">{getFinalDesc(desc)}</div>
       <div>
-        <Button label="Read more" small onClick={handleClickReadmore} />
+        <Button label="Read more" small onClick={handleClickReadmore}>
+          Read more
+        </Button>
       </div>
       <Divider />
     </div>

@@ -1,10 +1,10 @@
 import React from 'react';
-import { func, string, object, bool } from 'prop-types';
+import { func, string, object, bool, node } from 'prop-types';
 import noop from '@helpers/noop';
 
 import { styButton, stySmall } from './styles';
 
-function Button({ onClick, label, className, small, ...rest }) {
+function Button({ onClick, label, className, small, children, ...rest }) {
   return (
     <button
       css={[className, styButton, small ? stySmall : '']}
@@ -13,13 +13,14 @@ function Button({ onClick, label, className, small, ...rest }) {
       onClick={onClick}
       {...rest}
     >
-      {label}
+      {children}
     </button>
   );
 }
 
 Button.propTypes = {
   label: string,
+  children: node.isRequired,
   className: object,
   small: bool,
   onClick: func,

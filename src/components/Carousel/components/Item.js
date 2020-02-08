@@ -28,4 +28,4 @@ CarouselItem.propTypes = {
   author: string.isRequired,
 };
 
-export default CarouselItem;
+export default React.memo(CarouselItem);

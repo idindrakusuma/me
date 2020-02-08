@@ -40,4 +40,4 @@ FunFacts.propTypes = {
   awards: number.isRequired,
 };
 
-export default FunFacts;
+export default React.memo(FunFacts);
