@@ -1,31 +1,30 @@
 import React from 'react';
-import { string, object, bool } from 'prop-types';
+import { string, bool } from 'prop-types';
+import { TitleStyle, styUppercase } from './styles';
 
-import { styTitle, styUppercase } from './styles';
-
-function Title({ text, uppercase, propOptions, padding, margin }) {
+function Title({ text, uppercase, padding, light, margin, ...rest }) {
   return (
     <div style={{ padding, margin }}>
-      <div css={styTitle} {...propOptions}>
-        <h2 css={uppercase ? styUppercase : ''}>{text}</h2>
-      </div>
+      <TitleStyle light={light} {...rest}>
+        <h2 css={uppercase && styUppercase}>{text}</h2>
+      </TitleStyle>
     </div>
   );
 }
 
 Title.propTypes = {
-  propOptions: object,
   text: string.isRequired,
   uppercase: bool,
   padding: string,
   margin: string,
+  light: bool,
 };
 
 Title.defaultProps = {
-  propOptions: {},
   uppercase: true,
   padding: '',
   margin: '',
+  light: false,
 };
 
 export default Title;

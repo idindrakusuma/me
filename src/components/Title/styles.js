@@ -1,7 +1,8 @@
 import { css } from '@emotion/core';
+import styled from '@emotion/styled';
 
-export const styTitle = css`
-  color: #1a1a1a;
+export const TitleStyle = styled.div`
+  color: ${props => (props.light ? '#fff' : '#1a1a1a')};
   display: inline-block;
   text-transform: uppercase;
   padding-left: 20px;
@@ -15,8 +16,8 @@ export const styTitle = css`
     left: 0;
     height: 16px;
     width: 16px;
-    border-left: solid 3px #0c0c0c;
-    border-top: solid 3px #0c0c0c;
+    border-left: solid 3px ${props => (props.light ? '#fff' : '#0c0c0c')};
+    border-top: solid 3px ${props => (props.light ? '#fff' : '#0c0c0c')};
   }
 
   &:after {
@@ -27,8 +28,8 @@ export const styTitle = css`
     right: -17px;
     height: 16px;
     width: 16px;
-    border-right: solid 3px #0c0c0c;
-    border-bottom: solid 3px #0c0c0c;
+    border-right: solid 3px ${props => (props.light ? '#fff' : '#0c0c0c')};
+    border-bottom: solid 3px ${props => (props.light ? '#fff' : '#0c0c0c')};
   }
 
   h2 {
