@@ -2,6 +2,7 @@ import React from 'react';
 import Layout from '@components/Layout';
 import Card from '@components/Card';
 import Divider from '@components/Divider';
+import FunFacts from '@components/FunFacts';
 import { Carousel, CarouselItem } from '@components/Carousel';
 import TestimonialsData from '@/api/testimonial';
 
@@ -22,7 +23,8 @@ function WorksPage() {
 
   return (
     <Layout title="My Works">
-      <Card title="My works">
+      <FunFacts projects={30} customers={27} hours={4500} awards={7} />
+      <Card>
         <h2 style={{ fontSize: '16px', marginBottom: '20px' }}>How do they said about me? 🤔</h2>
         {renderTestimonials()}
       </Card>
