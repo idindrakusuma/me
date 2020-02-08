@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React from 'react';
 import { string, node, bool } from 'prop-types';
 
 import Header from '@components/Header';
@@ -9,34 +9,12 @@ import listMenuData from '@/api/listMenuData';
 
 import { Wrapper, MainPanel, WrapperBody } from './styles';
 
-const MINIMUM_VALUE = 1023;
-
 function Layout({ title, children, noWave }) {
-  const [isShowWidth, setIsShowWidth] = useState(true);
-
-  const updateWidth = () => {
-    if (window.innerWidth > MINIMUM_VALUE) {
-      setIsShowWidth(true);
-    } else {
-      setIsShowWidth(false);
-    }
-  };
-
-  useEffect(() => {
-    updateWidth();
-  }, []);
-
-  useEffect(() => {
-    window.addEventListener('resize', updateWidth);
-
-    return () => window.removeEventListener('resize', updateWidth);
-  }, []);
-
   return (
     <WrapperBody>
       <Header title={title} />
       <Wrapper>
-        {isShowWidth && <Sidebar socialMediaData={socialMediaData} listMenu={listMenuData} />}
+        <Sidebar socialMediaData={socialMediaData} listMenu={listMenuData} />
         <MainPanel noWave={noWave}>{children}</MainPanel>
       </Wrapper>
     </WrapperBody>

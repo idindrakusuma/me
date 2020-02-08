@@ -85,6 +85,10 @@ export const wrapper = css`
   z-index: 8;
   float: left;
   display: block;
+
+  @media screen and (max-width: 1024px) {
+    display: none;
+  }
 `;
 
 const BEFORE_EFFECT = `
