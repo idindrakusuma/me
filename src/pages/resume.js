@@ -2,8 +2,8 @@ import React from 'react';
 import Layout from '@components/Layout';
 import Card from '@components/Card';
 import { Timeline, Event } from '@components/Timeline';
-import { intro } from '@components/Layout/styles';
 import data from '@/api/resumeData';
+import { Typography } from '@/styles';
 
 function ResumePage() {
   const renderEvents = () => {
@@ -26,10 +26,7 @@ function ResumePage() {
     <Layout title="Resume">
       <Card title="Education and Experience">
         <Timeline>{renderEvents()}</Timeline>
-        <p
-          css={intro}
-          dangerouslySetInnerHTML={{ __html: 'Need more details? you can check my linkedin or just email me! 😃' }}
-        />
+        <Typography>Need more details? you can check my linkedin or just email me! 😃</Typography>
       </Card>
     </Layout>
   );

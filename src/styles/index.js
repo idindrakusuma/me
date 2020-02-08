@@ -1,3 +1,4 @@
+import styled from '@emotion/styled';
 import { css, keyframes } from '@emotion/core';
 
 export const styWrapper = css`
@@ -127,5 +128,18 @@ export const styContactSocMed = css`
 
   @media only screen and (max-height: 600px) {
     margin: 15px 0;
+  }
+`;
+
+export const Typography = styled.p`
+  font-size: 14px;
+  font-family: 'montserrat', sans-serif;
+  font-weight: 300;
+  line-height: 1.5;
+  color: #2c2c2c;
+  margin: 20px 0;
+
+  a {
+    color: #2c2c2c;
   }
 `;

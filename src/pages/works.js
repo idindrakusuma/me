@@ -4,9 +4,15 @@ import Card from '@components/Card';
 import Divider from '@components/Divider';
 import FunFacts from '@components/FunFacts';
 import { Carousel, CarouselItem } from '@components/Carousel';
+import ImgPatners from '@assets/patners.jpg';
 import TestimonialsData from '@/api/testimonial';
+import { Typography } from '@/styles';
 
 function WorksPage() {
+  const renderTitle = (title, margin) => {
+    return <h2 style={{ fontSize: '16px', margin }}>{title}</h2>;
+  };
+
   const renderTestimonials = () => {
     return (
       <>
@@ -16,7 +22,6 @@ function WorksPage() {
           ))}
         </Carousel>
         <br />
-        <Divider />
       </>
     );
   };
@@ -25,8 +30,11 @@ function WorksPage() {
     <Layout title="My Works">
       <FunFacts projects={30} customers={27} hours={4500} awards={7} />
       <Card>
-        <h2 style={{ fontSize: '16px', marginBottom: '20px' }}>How do they said about me? 🤔</h2>
+        {renderTitle('How do they said about me? 🤔', '10px 0 30px 0')}
         {renderTestimonials()}
+        <img src={ImgPatners} alt="patners indra kusuma" />
+        <Divider />
+        <Typography>Want something to discuss with me? Please email me! 😃</Typography>
       </Card>
     </Layout>
   );
