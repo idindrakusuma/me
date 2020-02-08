@@ -1,4 +1,4 @@
-name: Validating components
+name: code-tests
 
 on: [push]
 
