@@ -10,21 +10,28 @@ import { Timeline, Event } from '@components/Timeline';
 
 import ImgPatners from '@assets/patners.jpg';
 import TestimonialsData from '@/api/testimonial';
-import { awards } from '@/api/worksData';
+import { awards, projects } from '@/api/worksData';
 import { Typography, styFlexCenter } from '@/styles';
 
-const TRESHOLD = 4;
+const TRESHOLD = 3;
 
 function WorksPage() {
   const [isShowAllAward, setIsShowAllAward] = useState(false);
+  const [isShowAllProject, setIsShowAllProject] = useState(false);
 
-  const isShowButton = useMemo(() => {
+  const isShowButtonAward = useMemo(() => {
     if (!isShowAllAward && awards.length > TRESHOLD) return true;
 
     return false;
   }, [isShowAllAward]);
 
-  const renderButton = () => {
+  const isShowButtonProject = useMemo(() => {
+    if (!isShowAllProject && projects.length > TRESHOLD) return true;
+
+    return false;
+  }, [isShowAllProject]);
+
+  const renderButtonAwards = () => {
     if (isShowAllAward) {
       return (
         <Button small onClick={() => setIsShowAllAward(false)}>
@@ -33,10 +40,30 @@ function WorksPage() {
       );
     }
 
-    if (isShowButton) {
+    if (isShowButtonAward) {
       return (
         <Button small onClick={() => setIsShowAllAward(true)}>
-          <span css={styFlexCenter}>Show more 🤙</span>
+          <span css={styFlexCenter}>Show more awards 🤙</span>
+        </Button>
+      );
+    }
+
+    return null;
+  };
+
+  const renderButtonProjects = () => {
+    if (isShowAllProject) {
+      return (
+        <Button small onClick={() => setIsShowAllProject(false)}>
+          <span css={styFlexCenter}>Show less 👋</span>
+        </Button>
+      );
+    }
+
+    if (isShowButtonProject) {
+      return (
+        <Button small onClick={() => setIsShowAllProject(true)}>
+          <span css={styFlexCenter}>Show more projects 👨‍💻</span>
         </Button>
       );
     }
@@ -53,6 +80,34 @@ function WorksPage() {
 
     awards.some((item, index) => {
       if (!isShowAllAward) {
+        if (index < TRESHOLD) {
+          showItems.push(
+            <Event key={index} interval={item.date} title={item.title} subTitle={item.location} showIcon>
+              <div dangerouslySetInnerHTML={{ __html: item.desc }} />
+            </Event>,
+          );
+        } else {
+          return true;
+        }
+      } else {
+        showItems.push(
+          <Event key={index} interval={item.date} title={item.title} subTitle={item.location} showIcon>
+            <div dangerouslySetInnerHTML={{ __html: item.desc }} />
+          </Event>,
+        );
+      }
+
+      return false;
+    });
+
+    return showItems;
+  };
+
+  const renderProjects = () => {
+    const showItems = [];
+
+    projects.some((item, index) => {
+      if (!isShowAllProject) {
         if (index < TRESHOLD) {
           showItems.push(
             <Event key={index} interval={item.date} title={item.title} subTitle={item.location} showIcon>
@@ -94,7 +149,12 @@ function WorksPage() {
       <FunFacts projects={30} customers={27} hours={4500} awards={7} />
       <Card title="Awards">
         <Timeline>{renderAwards()}</Timeline>
-        <div style={{ margin: '0 auto', display: 'table' }}>{renderButton()}</div>
+        <div style={{ margin: '0 auto', display: 'table' }}>{renderButtonAwards()}</div>
+      </Card>
+      <Divider />
+      <Card title="Projects">
+        <Timeline>{renderProjects()}</Timeline>
+        <div style={{ margin: '0 auto', display: 'table' }}>{renderButtonProjects()}</div>
       </Card>
       <Card>
         {renderTitle('How do they said about me? 🤔', '10px 0 30px 0')}
