@@ -1,6 +1,6 @@
-import ImageZakiy from '@/assets/zakiy.png';
+import ImageZakiy from '@/assets/zakiy-min.png';
 import ImageDinda from '@/assets/dinda.jpg';
-import ImageJamal from '@/assets/jamal.jpg';
+import ImageJamal from '@/assets/jamal-min.jpg';
 
 const testimonials = [
   {

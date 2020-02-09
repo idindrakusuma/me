@@ -8,7 +8,7 @@ import Button from '@components/Button';
 import { Carousel, CarouselItem } from '@components/Carousel';
 import { Timeline, Event } from '@components/Timeline';
 
-import ImgPatners from '@assets/patners.jpg';
+import ImgPatners from '@assets/patners-min.jpg';
 import TestimonialsData from '@/api/testimonialData';
 import { awards } from '@/api/worksData';
 import { Typography, styFlexCenter } from '@/styles';
