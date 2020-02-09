@@ -2,9 +2,7 @@ import styled from '@emotion/styled';
 import { css } from '@emotion/core';
 import WaveSVG from '@assets/wave.svg';
 import { textColor } from '@/constants/color';
-
-const WIDTH_MD = '720px';
-const WIDTH_SM = '500px';
+import { WIDTH_MD, WIDTH_SM, SIDEBAR_OFF } from '@/constants/screen';
 
 export const WrapperBody = styled.div`
   background: #000046;
@@ -102,6 +100,10 @@ export const MainPanel = styled.div`
 
   @media (min-width: 1025px) {
     float: right;
+  }
+
+  @media only screen and (max-width: ${SIDEBAR_OFF}) {
+    margin: 0 auto;
   }
 
   @media (max-width: ${WIDTH_MD}) {

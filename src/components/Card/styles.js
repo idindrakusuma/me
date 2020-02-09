@@ -9,6 +9,7 @@ export const styCardWrapper = css`
 
   @media only screen and (max-width: ${WIDTH_MD}) {
     padding: 16px;
+    margin: 0 auto;
   }
 
   @media only screen and (max-width: ${WIDTH_SM}) {
