@@ -8,7 +8,7 @@ describe('Should render <Button /> correctly', () => {
   afterEach(cleanup);
 
   test('showing correct label button', () => {
-    const { getByText } = render(<Button label="Click Me" />);
+    const { getByText } = render(<Button label="Click Me">Click Me</Button>);
 
     expect(getByText('Click Me')).toBeVisible();
   });

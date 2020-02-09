@@ -143,3 +143,8 @@ export const Typography = styled.p`
     color: #2c2c2c;
   }
 `;
+
+export const styFlexCenter = css`
+  display: flex;
+  align-items: center;
+`;

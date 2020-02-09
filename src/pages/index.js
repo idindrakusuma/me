@@ -14,9 +14,10 @@ function AppIndex() {
   };
 
   const renderQuote = () => {
-    if (loading) return <h2>✨Preparing something special for you..</h2>;
-
-    if (!data.content) return null;
+    /**
+     * When we still waiting the data, just showing the loader
+     */
+    if (loading || !data.content) return <h2>✨Preparing something special for you..</h2>;
 
     return (
       <>
@@ -30,7 +31,9 @@ function AppIndex() {
     <Layout title="Welcome" noWave={false}>
       <div css={styWrapper}>
         <div css={styWelcomeWrapper}>{renderQuote()}</div>
-        <Button label="Let me know who is Indra.." className={styBtnWelcome} onClick={handleClickButton} />
+        <Button label="who is indra" className={styBtnWelcome} onClick={handleClickButton}>
+          Let me know who is Indra 🤔
+        </Button>
       </div>
     </Layout>
   );
