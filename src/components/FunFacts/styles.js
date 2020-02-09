@@ -1,5 +1,6 @@
 import { css } from '@emotion/core';
 import ImgBackground from '@assets/indra-champion.png';
+import { WIDTH_SM } from '@/constants/screen';
 
 export const styWrapper = css`
   background: url(${ImgBackground});
@@ -8,6 +9,10 @@ export const styWrapper = css`
   padding: 60px 70px;
   position: relative;
   border-bottom: solid 1px #eee;
+
+  @media only screen and (max-width: ${WIDTH_SM}) {
+    padding: 32px 16px;
+  }
 `;
 
 export const styOverlay = css`
@@ -40,5 +45,16 @@ export const styDescription = css`
     font-size: 14px;
     font-family: 'Montserrat', sans-serif;
     font-weight: 400;
+  }
+
+  @media only screen and (max-width: ${WIDTH_SM}) {
+    h3 {
+      font-size: 16px;
+      margin: 8px 0;
+    }
+
+    span {
+      font-size: 12px;
+    }
   }
 `;
