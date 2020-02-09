@@ -2,9 +2,10 @@ import React from 'react';
 import { navigate } from 'gatsby';
 
 import Layout from '@components/Layout';
+import Card from '@components/Card';
 import Button from '@components/Button';
 import useRandomQuotes from '@/hooks/useRandomQuotes';
-import { styWelcomeWrapper, styWrapper, styBtnWelcome } from '@/styles';
+import { styWelcomeWrapper, styBtnWelcome } from '@/styles';
 
 function AppIndex() {
   const { loading, data } = useRandomQuotes();
@@ -28,13 +29,13 @@ function AppIndex() {
   };
 
   return (
-    <Layout title="Welcome" noWave={false}>
-      <div css={styWrapper}>
+    <Layout title="Welcome" noWave={false} centerContent>
+      <Card>
         <div css={styWelcomeWrapper}>{renderQuote()}</div>
         <Button label="who is indra" className={styBtnWelcome} onClick={handleClickButton}>
           Let me know who is Indra 🤔
         </Button>
-      </div>
+      </Card>
     </Layout>
   );
 }

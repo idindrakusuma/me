@@ -9,7 +9,7 @@ import { Carousel, CarouselItem } from '@components/Carousel';
 import { Timeline, Event } from '@components/Timeline';
 
 import ImgPatners from '@assets/patners.jpg';
-import TestimonialsData from '@/api/testimonial';
+import TestimonialsData from '@/api/testimonialData';
 import { awards, projects } from '@/api/worksData';
 import { Typography, styFlexCenter } from '@/styles';
 
