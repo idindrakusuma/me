@@ -20,4 +20,13 @@ export const styCardWrapper = css`
 export const styHeaderWrapper = css`
   margin-bottom: 20px;
   position: relative;
+
+  @media only screen and (max-width: ${WIDTH_SM}) {
+    display: flex;
+    margin-top: 10px;
+
+    h2 {
+      font-weight: bold;
+    }
+  }
 `;

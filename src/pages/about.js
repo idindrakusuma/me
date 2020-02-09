@@ -45,7 +45,7 @@ function AboutPage() {
 
   return (
     <Layout title="About">
-      <Card title="✨Let me introduce my self">
+      <Card title="Let me introduce my self">
         <div css={row}>
           <p css={intro} dangerouslySetInnerHTML={{ __html: TextIntroduction }} />
         </div>

@@ -95,6 +95,7 @@ export const styItemImage = css`
 
   @media only screen and (max-width: ${WIDTH_SM}) {
     width: 0%;
+    display: none;
   }
 
   img {
