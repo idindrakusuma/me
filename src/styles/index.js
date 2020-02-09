@@ -1,13 +1,23 @@
 import styled from '@emotion/styled';
 import { css, keyframes } from '@emotion/core';
+import pxToRem from '@helpers/pxToRem';
+import { WIDTH_SM, WIDTH_MD } from '@/constants/screen';
 
 export const styWrapper = css`
   margin: 25vh auto;
+
+  @media only screen and (max-width: 1023px) {
+    margin: 0 auto;
+  }
 `;
 
 export const styBtnWelcome = css`
   margin: 50px auto;
   cursor: pointer;
+
+  @media only screen and (max-width: ${WIDTH_SM}) {
+    font-size: ${pxToRem(12)};
+  }
 `;
 
 export const styWelcomeWrapper = css`
@@ -43,7 +53,7 @@ export const styWelcomeWrapper = css`
   h2 {
     color: #0c0c0c;
     font-family: montserrat, sans-serif;
-    font-size: 25px;
+    font-size: ${pxToRem(25)};
     font-weight: 400;
     line-height: 1.3em;
     margin: 0px;
@@ -52,10 +62,46 @@ export const styWelcomeWrapper = css`
   span {
     color: rgb(95, 95, 95);
     display: block;
-    font-size: 18px;
+    font-size: ${pxToRem(18)};
     margin-top: 10px;
     font-family: 'roboto slab', serif;
     font-weight: 300;
+  }
+
+  @media only screen and (max-width: ${WIDTH_MD}) {
+    &:before {
+      left: 8px;
+      top: -20px;
+      border-top: 3px solid #0c0c0c;
+      border-left: 3px solid #0c0c0c;
+    }
+
+    &:after {
+      right: 8px;
+      bottom: -20px;
+      border-bottom: 3px solid #0c0c0c;
+      border-right: 3px solid #0c0c0c;
+    }
+  }
+
+  @media only screen and (max-width: ${WIDTH_SM}) {
+    &:before {
+      border-top: 0;
+      border-left: 0;
+    }
+
+    &:after {
+      border-bottom: 0;
+      border-right: 0;
+    }
+
+    h2 {
+      font-size: ${pxToRem(16)};
+    }
+
+    span {
+      font-size: ${pxToRem(14)};
+    }
   }
 `;
 
@@ -66,7 +112,7 @@ export const styText = css`
   p {
     line-height: 28px;
     color: #2c2c2c;
-    font-size: 14px;
+    font-size: ${pxToRem(14)};
     font-family: 'montserrat', sans-serif;
   }
 
@@ -123,7 +169,7 @@ export const styContactSocMed = css`
   }
 
   a {
-    font-size: 30px;
+    font-size: ${pxToRem(30)};
   }
 
   @media only screen and (max-height: 600px) {
@@ -132,7 +178,7 @@ export const styContactSocMed = css`
 `;
 
 export const Typography = styled.p`
-  font-size: 14px;
+  font-size: ${pxToRem(14)};
   font-family: 'montserrat', sans-serif;
   font-weight: 300;
   line-height: 1.5;

@@ -1,5 +1,6 @@
-import { css } from '@emotion/core';
 import styled from '@emotion/styled';
+import { css } from '@emotion/core';
+import { WIDTH_SM } from '@/constants/screen';
 
 export const TitleStyle = styled.div`
   color: ${props => (props.light ? '#fff' : '#1a1a1a')};
@@ -36,6 +37,16 @@ export const TitleStyle = styled.div`
     font-size: 16px;
     font-weight: 400;
     margin: 0;
+  }
+
+  @media only screen and (max-width: ${WIDTH_SM}) {
+    &:before {
+      width: 100%;
+    }
+
+    &:after {
+      width: 100%;
+    }
   }
 `;
 

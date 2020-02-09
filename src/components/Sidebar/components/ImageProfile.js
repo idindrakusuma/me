@@ -1,6 +1,6 @@
 import React from 'react';
 import { string } from 'prop-types';
-import { avatar } from './styles';
+import { avatar } from '../styles';
 
 function ImageProfile({ urlPhoto }) {
   return (

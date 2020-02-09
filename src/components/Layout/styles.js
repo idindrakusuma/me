@@ -2,9 +2,7 @@ import styled from '@emotion/styled';
 import { css } from '@emotion/core';
 import WaveSVG from '@assets/wave.svg';
 import { textColor } from '@/constants/color';
-
-const WIDTH_MD = '1024px';
-const WIDTH_SM = '500px';
+import { WIDTH_MD, WIDTH_SM, SIDEBAR_OFF } from '@/constants/screen';
 
 export const WrapperBody = styled.div`
   background: #000046;
@@ -51,6 +49,12 @@ export const Wrapper = styled.div`
     margin: 16px auto;
     padding: 0;
   }
+
+  @media only screen and (max-width: ${WIDTH_MD}) {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+  }
 `;
 
 export const Header = styled.header`
@@ -82,20 +86,31 @@ export const MainPanel = styled.div`
     return '';
   }}
 
+  ${props => {
+    if (props.centerContent) {
+      return `
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      `;
+    }
+
+    return '';
+  }}
+
   @media (min-width: 1025px) {
     float: right;
   }
 
-  @media (max-width: ${WIDTH_MD}) {
-    width: 95%;
-    margin: auto;
-    border-radius: 10px;
+  @media only screen and (max-width: ${SIDEBAR_OFF}) {
+    margin: 0 auto;
   }
 
-  @media (max-width: ${WIDTH_SM}) {
+  @media (max-width: ${WIDTH_MD}) {
     width: 100%;
     margin: auto;
-    border-radius: 10px;
+    margin-bottom: 44px;
+    min-height: 92vh;
   }
 `;
 

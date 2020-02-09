@@ -1,4 +1,6 @@
+import styled from '@emotion/styled';
 import { css } from '@emotion/core';
+import { WIDTH_SM } from '@/constants/screen';
 
 export const container = css`
   font-family: 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
@@ -62,12 +64,20 @@ export const body = css`
   top: -1.875em;
   left: 2em;
   width: 95%;
+
   h3 {
     font-size: 16px;
   }
+
   h4 {
     font-size: 14px;
     margin-bottom: 8px;
+    display: flex;
+    align-items: center;
+  }
+
+  @media only screen and (max-width: ${WIDTH_SM}) {
+    padding: 2em 0 0 1em;
   }
 `;
 
@@ -88,4 +98,30 @@ export const description = css`
   p {
     padding-bottom: 1em;
   }
+`;
+
+export const Badge = styled.span`
+  display: inline-block;
+  padding: 0.25em 0.4em;
+  font-size: 75%;
+  font-weight: 700;
+  line-height: 1;
+  text-align: center;
+  white-space: nowrap;
+  vertical-align: baseline;
+  border-radius: 0.25rem;
+  color: #fff;
+  margin-right: 8px;
+
+  ${props => {
+    if (props.isAward) {
+      return `
+        background-color: #28a745;
+      `;
+    }
+
+    return `
+      background-color: #007bff;
+    `;
+  }}
 `;

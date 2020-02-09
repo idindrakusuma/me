@@ -71,9 +71,6 @@ export const awards = [
     desc:
       'We have many majors in our schools and me got the best graduated in Natioan Exam and School Exam in SMK MUhammadiyah 03 Weleri ✨',
   },
-];
-
-export const projects = [
   {
     title: 'Tokopedia Lite Cart & Checkout Page',
     location: 'Tokopedia, Jakarta',

@@ -1,4 +1,5 @@
 import { css, keyframes } from '@emotion/core';
+import { WIDTH_SM } from '@/constants/screen';
 import { ITEM_ID } from './constants';
 
 export const fade = keyframes`
@@ -92,6 +93,11 @@ export const styItemWrapper = css`
 export const styItemImage = css`
   width: 30%;
 
+  @media only screen and (max-width: ${WIDTH_SM}) {
+    width: 0%;
+    display: none;
+  }
+
   img {
     border: solid 1px #ececec;
     width: 128px;
@@ -117,5 +123,12 @@ export const styTextWrapper = css`
   .title {
     margin-left: 4px;
     font-size: 12px;
+  }
+
+  @media only screen and (max-width: ${WIDTH_SM}) {
+    width: 100%;
+    p {
+      margin-top: -10px;
+    }
   }
 `;

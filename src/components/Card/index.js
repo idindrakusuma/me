@@ -1,12 +1,12 @@
 import React from 'react';
-import { node, object, string } from 'prop-types';
+import { node, string } from 'prop-types';
 
 import Title from '../Title';
 import { styCardWrapper, styHeaderWrapper } from './styles';
 
-function Card({ title, children, propOptions }) {
+function Card({ title, children, ...rest }) {
   return (
-    <div css={styCardWrapper} {...propOptions}>
+    <div css={styCardWrapper} {...rest}>
       {title && (
         <div css={styHeaderWrapper}>
           <Title text={title} />
@@ -20,12 +20,10 @@ function Card({ title, children, propOptions }) {
 Card.propTypes = {
   title: string,
   children: node.isRequired,
-  propOptions: object,
 };
 
 Card.defaultProps = {
   title: '',
-  propOptions: {},
 };
 
 export default Card;

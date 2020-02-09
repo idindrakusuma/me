@@ -11,19 +11,19 @@ function FunFacts({ projects, customers, hours, awards }) {
         <Title text="Fun Facts" light />
         <div css={styDescription}>
           <div>
-            <h3>{`> ${projects} 🥳`}</h3>
+            <h3>{`> ${projects}`}</h3>
             <span>Projects Completed</span>
           </div>
           <div>
-            <h3>{`> ${customers} 😊`}</h3>
+            <h3>{`> ${customers}`}</h3>
             <span>Happy Customers</span>
           </div>
           <div>
-            <h3>{`> ${hours} 😎`}</h3>
+            <h3>{`> ${hours}`}</h3>
             <span>Hours Worked</span>
           </div>
           <div>
-            <h3>{`> ${awards} 🏆`}</h3>
+            <h3>{`> ${awards}`}</h3>
             <span>Awards Won</span>
           </div>
         </div>

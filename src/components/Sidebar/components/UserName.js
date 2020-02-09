@@ -1,7 +1,7 @@
 import React from 'react';
 import { string } from 'prop-types';
 
-import { name } from './styles';
+import { name } from '../styles';
 
 function UserName({ fullName, title }) {
   return (
