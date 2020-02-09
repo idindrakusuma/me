@@ -1,5 +1,5 @@
 import { css } from '@emotion/core';
-import ImgBackground from '@assets/indra-champion.png';
+import ImgBackground from '@assets/indra-champion-min.png';
 import { WIDTH_SM } from '@/constants/screen';
 
 export const styWrapper = css`
