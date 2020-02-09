@@ -3,6 +3,7 @@ import { string, node, bool } from 'prop-types';
 
 import Header from '@components/Header';
 import Sidebar from '@components/Sidebar';
+import Navbar from '@components/Navbar';
 
 import socialMediaData from '@/api/socialMediaData';
 import listMenuData from '@/api/listMenuData';
@@ -18,6 +19,7 @@ function Layout({ title, children, noWave, centerContent }) {
     <WrapperBody>
       <Header title={title} />
       <Wrapper>
+        <Navbar listMenu={listMenuData} />
         <Sidebar socialMediaData={socialMediaData} listMenu={listMenuData} />
         <MainPanel noWave={noWave} centerContent={centerContent}>
           {children}

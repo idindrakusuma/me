@@ -1,7 +1,7 @@
 import React from 'react';
 import { arrayOf, object } from 'prop-types';
 
-import { socialMedia } from './styles';
+import { socialMedia } from '../styles';
 
 function ListSocialMedia({ socialMediaData }) {
   if (!socialMediaData) {

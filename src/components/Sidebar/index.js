@@ -2,10 +2,10 @@ import React from 'react';
 import { object, string, arrayOf } from 'prop-types';
 
 import IndraKusumaProfilePhoto from '@assets/indra-new.jpg';
-import ListMenu from './ListMenu';
-import UserName from './UserName';
-import ImageProfile from './ImageProfile';
-import ListSocialMedia from './ListSocialMedia';
+import ListMenu from './components/ListMenu';
+import UserName from './components/UserName';
+import ImageProfile from './components/ImageProfile';
+import ListSocialMedia from './components/ListSocialMedia';
 
 import { copyright, wrapper } from './styles';
 

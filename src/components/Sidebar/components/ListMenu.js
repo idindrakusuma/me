@@ -2,7 +2,7 @@ import React from 'react';
 import { object, arrayOf } from 'prop-types';
 import { Link } from 'gatsby';
 
-import { navigation } from './styles';
+import { navigation } from '../styles';
 
 function Menus({ listMenu }) {
   if (!listMenu) {

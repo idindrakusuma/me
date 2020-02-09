@@ -107,6 +107,8 @@ export const MainPanel = styled.div`
   @media (max-width: ${WIDTH_MD}) {
     width: 100%;
     margin: auto;
+    margin-bottom: 44px;
+    min-height: 92vh;
   }
 `;
 
