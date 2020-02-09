@@ -8,8 +8,9 @@ export const styWrapper = css`
   position: fixed;
   z-index: 3;
   background-color: rgba(255, 255, 255, 0.985);
+  border-top-width: 0.9px;
   border-top-style: solid;
-  border-top-width: 1px;
+  border-top-color: rgb(238, 238, 238);
   padding: 16px 0;
   display: none;
   font-size: 20px;
