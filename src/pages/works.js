@@ -119,7 +119,7 @@ function WorksPage() {
       <Card>
         {renderTitle('How do they said about me? 🤔', '10px 0 30px 0')}
         {renderTestimonials()}
-        <img src={ImgPatners} alt="patners indra kusuma" />
+        <img src={ImgPatners} loading="lazy" alt="patners indra kusuma" />
         <Divider />
         <Typography>Want something to discuss with me? Please email me! 😃</Typography>
       </Card>

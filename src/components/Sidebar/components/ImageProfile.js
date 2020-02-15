@@ -5,7 +5,7 @@ import { avatar } from '../styles';
 function ImageProfile({ urlPhoto }) {
   return (
     <div css={avatar}>
-      <img src={urlPhoto} alt="Indra Kusuma" />
+      <img src={urlPhoto} loading="lazy" alt="Indra Kusuma" />
     </div>
   );
 }

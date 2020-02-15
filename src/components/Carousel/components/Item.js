@@ -9,7 +9,7 @@ function CarouselItem({ title, imgUrl, text, author }) {
     <div className={`${ITEM_ID} fade`}>
       <div css={styItemWrapper}>
         <div css={styItemImage}>
-          <img src={imgUrl} alt={author} />
+          <img src={imgUrl} alt={author} loading="lazy" />
         </div>
         <div css={styTextWrapper}>
           <p dangerouslySetInnerHTML={{ __html: `"${text}"` }} />
