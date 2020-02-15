@@ -7,8 +7,12 @@ function Skills({ title, ability }) {
   return (
     <>
       <div css={[skillsInfo, clearFix]}>
-        <h3 css={pullLeft}>{title}</h3>
-        <span css={pullRight}>{ability}%</span>
+        <h3 ss={pullLeft} data-testid="skillsTitle">
+          {title}
+        </h3>
+        <span css={pullRight} data-testid="skillsAbility">
+          {ability}%
+        </span>
       </div>
       <br />
       <div css={progress}>
