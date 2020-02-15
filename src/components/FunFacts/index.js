@@ -11,20 +11,20 @@ function FunFacts({ projects, customers, hours, awards }) {
         <Title text="Fun Facts" light />
         <div css={styDescription}>
           <div>
-            <h3>{`> ${projects}`}</h3>
-            <span>Projects Completed</span>
+            <h3 data-testid="ffTitlePro">{`> ${projects}`}</h3>
+            <span data-testid="ffSubPro">Projects Completed</span>
           </div>
           <div>
-            <h3>{`> ${customers}`}</h3>
-            <span>Happy Customers</span>
+            <h3 data-testid="ffTitleCus">{`> ${customers}`}</h3>
+            <span data-testid="ffSubCus">Happy Customers</span>
           </div>
           <div>
-            <h3>{`> ${hours}`}</h3>
-            <span>Hours Worked</span>
+            <h3 data-testid="ffTitleHours">{`> ${hours}`}</h3>
+            <span data-testid="ffSubHours">Hours Worked</span>
           </div>
           <div>
-            <h3>{`> ${awards}`}</h3>
-            <span>Awards Won</span>
+            <h3 data-testid="ffTitleAwards">{`> ${awards}`}</h3>
+            <span data-testid="ffSubAwards">Awards Won</span>
           </div>
         </div>
       </div>
