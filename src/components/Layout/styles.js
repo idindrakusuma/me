@@ -172,7 +172,7 @@ export const intro = css`
 `;
 
 export const info = css`
-  margin-bottom: 40px;
+  margin-bottom: 0;
   padding: 0 !important;
   width: 100%;
   list-style: none;

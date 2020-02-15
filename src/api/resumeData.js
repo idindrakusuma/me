@@ -5,7 +5,7 @@ export const resumeData = [
     title: 'Software Engineer - Web Platform',
     subtitle: 'Tokopedia, Jakarta',
     desc: `Tokopedia is an Indonesian technology company with a <strong>mission to
-    democratize commerce through technology</strong>. Our vision is to build an ecosystem where anyone can start and discover anything. We empower millions of merchants and users across our marketplace, logistics, payments, and financial technology businesses. <br/> <br/> In this company, I responsible for web modules like <strong>Cart, Checkout and Logistics</strong>. We use many Javascript libraries and mostly in ReactJs Ecosystem. We also create the unit test, integration test also alert to make stable.<br/> <br/> #reactjs #graphql #monorepo #typescript`,
+    democratize commerce through technology</strong>. Our vision is to build an ecosystem where anyone can start and discover anything. We empower millions of merchants and users across our marketplace, logistics, payments, and financial technology businesses. <br/> <br/> In this company, I responsible for modules <strong>Cart, Checkout and Logistics</strong>. We use many Javascript libraries and mostly in ReactJs Ecosystem. We also create the <strong>unit test, integration test also E2E test </strong> to increase our confident when ship code to production. <br/> <br/> We also implement client logger to catch latest error in production, so we can fix in quickly when something wrong happen in production. <br /> <br /> #reactjs #graphql #monorepo #typescript`,
   },
   {
     interval: 'Nov 2018 - Jul 2019',

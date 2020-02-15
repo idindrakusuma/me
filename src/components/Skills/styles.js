@@ -2,7 +2,9 @@ import styled from '@emotion/styled';
 import { css } from '@emotion/core';
 
 export const skillsInfo = css`
-  margin: 30px 0;
+  display: flex;
+  justify-content: space-between;
+  margin: 40px 0 0 0;
   box-sizing: border-box;
 
   h3 {
@@ -43,7 +45,7 @@ export const pullRight = css`
 
 export const progress = css`
   height: 4px;
-  margin: 20px 0;
+  margin: 0;
   background-color: #e0e0e0;
   border-radius: 0;
 `;
