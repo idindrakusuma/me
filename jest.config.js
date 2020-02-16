@@ -26,4 +26,5 @@ module.exports = {
   setupFiles: ['<rootDir>/loadershim.js'],
   setupFilesAfterEnv: ['<rootDir>/setup-test-env.js'],
   modulePaths: ['<rootDir>/src/'],
+  collectCoverageFrom: ['<rootDir>/src/**/*.{js,jsx}'],
 };
