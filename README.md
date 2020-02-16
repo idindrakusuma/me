@@ -1,6 +1,6 @@
 # Me
 
-![Gatsby Publish](https://github.com/idindrakusuma/me/workflows/Gatsby%20Publish/badge.svg) ![code-tests](https://github.com/idindrakusuma/me/workflows/code-tests/badge.svg)
+![Gatsby Publish](https://github.com/idindrakusuma/me/workflows/Gatsby%20Publish/badge.svg) [![codecov](https://codecov.io/gh/idindrakusuma/me/branch/master/graph/badge.svg)](https://codecov.io/gh/idindrakusuma/me)
 
 Hi everyone! 👋 Welcome to my personal blog repository. Currently, I have published personal web profile and you see it at https://indrakusuma.web.id/web-profile. That blog was built using old tech stack with many unused animation javascript. The performance also bad because we load all of modules in the first time user access.
 
