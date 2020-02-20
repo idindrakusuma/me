@@ -1,4 +1,4 @@
-describe('Accessbility test for homepage', () => {
+describe('Verifyinng feature in homepage', () => {
   beforeEach(() => {
     cy.visit('/').injectAxe();
   });
