@@ -14,7 +14,7 @@ function Menus({ listMenu }) {
       <ul>
         {listMenu.map((menu, index) => (
           <li key={index}>
-            <Link to={menu.href} title={menu.name} activeClassName="active">
+            <Link to={menu.href} title={menu.name} data-testid={menu.dataTestId?.desktop} activeClassName="active">
               {menu.name}
             </Link>
           </li>

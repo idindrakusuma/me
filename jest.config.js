@@ -17,7 +17,7 @@ module.exports = {
     '@pages/(.*)$': '<rootDir>/src/pages/$1',
     '@aseets/(.*)$': '<rootDir>/src/assets/$1',
   },
-  testPathIgnorePatterns: ['node_modules', '\\.cache', '<rootDir>.*/public'],
+  testPathIgnorePatterns: ['node_modules', '\\.cache', '<rootDir>.*/public', '<rootDir>.*/cypress'],
   transformIgnorePatterns: ['node_modules/(?!(gatsby)/)'],
   globals: {
     __PATH_PREFIX__: '',

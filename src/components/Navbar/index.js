@@ -11,7 +11,13 @@ function Navbar({ listMenu }) {
     <div css={styWrapper}>
       {listMenu.map((menu, index) => {
         return (
-          <Link key={index} to={menu.href} title={menu.name} activeClassName="active">
+          <Link
+            key={index}
+            to={menu.href}
+            title={menu.name}
+            data-testid={menu.dataTestId?.mobile}
+            activeClassName="active"
+          >
             <menu.icon />
           </Link>
         );

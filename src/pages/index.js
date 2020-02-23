@@ -32,7 +32,7 @@ function AppIndex() {
     <Layout title="Welcome" noWave={false} centerContent>
       <Card>
         <div css={styWelcomeWrapper}>{renderQuote()}</div>
-        <Button label="who is indra" className={styBtnWelcome} onClick={handleClickButton}>
+        <Button label="who is indra" data-testid="btnWhoIndra" className={styBtnWelcome} onClick={handleClickButton}>
           Let me know who is Indra 🤔
         </Button>
       </Card>
