@@ -1,43 +1,59 @@
 import React from 'react';
-import { navigate } from 'gatsby';
 
 import Layout from '@components/Layout';
+import SkillsInfo from '@components/Skills';
 import Card from '@components/Card';
-import Button from '@components/Button';
-import useRandomQuotes from '@/hooks/useRandomQuotes';
-import { styWelcomeWrapper, styBtnWelcome } from '@/styles';
+import { row, intro, info, colXs12 } from '@components/Layout/styles';
+import { aboutMe, introduction as TextIntroduction, skills } from '@/api/aboutData';
+import { textColor } from '@/constants/color';
 
-function AppIndex() {
-  const { loading, data } = useRandomQuotes();
-
-  const handleClickButton = () => {
-    navigate('/about');
-  };
-
-  const renderQuote = () => {
-    /**
-     * When we still waiting the data, just showing the loader
-     */
-    if (loading || !data.content) return <h2>✨Preparing something special for you..</h2>;
-
+function AboutPage() {
+  const renderInformation = () => {
     return (
-      <>
-        <h2>&quot;{data.content}&quot;</h2>
-        <span>{`${data.author} via Quotable`}</span>
-      </>
+      <div css={row}>
+        <ul css={info}>
+          {aboutMe.map((me, index) => (
+            <li key={index} style={{ display: 'flex', alignItems: 'center' }}>
+              <me.icon />
+              <span style={{ marginLeft: '8px', color: textColor }}>
+                {me.link === '' ? (
+                  me.answer
+                ) : (
+                  <a href={me.link} target="_blank" rel="noopener noreferrer">
+                    {me.answer}
+                  </a>
+                )}
+              </span>
+            </li>
+          ))}
+        </ul>
+      </div>
     );
   };
 
+  const renderSkills = () => {
+    return skills.map((item, index) => {
+      return (
+        <div css={row} key={index}>
+          <div css={colXs12}>
+            <SkillsInfo title={item.skill} ability={item.percentage} />
+          </div>
+        </div>
+      );
+    });
+  };
+
   return (
-    <Layout title="Welcome" noWave={false} centerContent>
+    <Layout title="Hi, Welcome!">
       <Card>
-        <div css={styWelcomeWrapper}>{renderQuote()}</div>
-        <Button label="who is indra" data-testid="btnWhoIndra" className={styBtnWelcome} onClick={handleClickButton}>
-          Let me know who is Indra 🤔
-        </Button>
+        <div css={row}>
+          <p css={intro} dangerouslySetInnerHTML={{ __html: TextIntroduction }} />
+        </div>
+        {renderInformation()}
+        {renderSkills()}
       </Card>
     </Layout>
   );
 }
 
-export default AppIndex;
+export default React.memo(AboutPage);

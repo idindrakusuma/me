@@ -35,17 +35,17 @@ export const skills = [
   },
   {
     skill: 'Javascript / ReactJS / GatsbyJS',
-    percentage: 90,
+    percentage: 95,
     full: false,
   },
   {
     skill: 'Team Development / Agile Scrum',
-    percentage: 85,
+    percentage: 90,
     full: false,
   },
   {
     skill: 'Web Development / Continous Integration',
-    percentage: 85,
+    percentage: 90,
     full: false,
   },
 ];
