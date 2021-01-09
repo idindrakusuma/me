@@ -22,7 +22,7 @@
   "dependencies": {
     "@emotion/core": "^10.0.27",
     "@emotion/styled": "^10.0.27",
-    "gatsby": "^2.19.7",
+    "gatsby": "^2.29.0",
     "gatsby-plugin-emotion": "^4.1.21",
     "gatsby-plugin-react-helmet-async": "^1.0.14",
     "prop-types": "^15.7.2",
