@@ -22,15 +22,6 @@ describe('Verifying Navigation bar..', () => {
       cy.visit('/').injectAxe();
     });
 
-    it('user can open `/about` when click button `btnWhoIndra` in homepage', () => {
-      cy.get('[data-testid="btnWhoIndra"]').click();
-
-      cy.location().should(location => {
-        expect(location.pathname).to.eq('/about');
-      });
-      cy.findByText(TITLE.about).should('exist');
-    });
-
     it('use can see the `/welcome` page when click icon homepage in navbar', () => {
       cy.get('[data-testid="mLinkWelcome"]').click();
 
@@ -84,15 +75,6 @@ describe('Verifying Navigation bar..', () => {
     beforeEach(() => {
       cy.viewport('macbook-11');
       cy.visit('/').injectAxe();
-    });
-
-    it('user can open `/about` when click button `btnWhoIndra` in homepage', () => {
-      cy.get('[data-testid="btnWhoIndra"]').click();
-
-      cy.location().should(location => {
-        expect(location.pathname).to.eq('/about');
-      });
-      cy.findByText(TITLE.about).should('exist');
     });
 
     it('use can see the `/welcome` page when click icon homepage in navbar', () => {

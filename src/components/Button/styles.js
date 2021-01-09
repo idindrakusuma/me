@@ -5,8 +5,10 @@ export const styButton = css`
   background: #0c0c0c;
   color: #fff;
   padding: 8px 10px;
-  border-radius: 2px;
+  border-radius: 4px;
   cursor: pointer;
+  border: none;
+  transition: 1s ease-out;
 
   &:hover {
     background: linear-gradient(to right, #2b32b2, #1488cc);

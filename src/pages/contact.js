@@ -22,7 +22,7 @@ function ContactPage() {
   };
 
   return (
-    <Layout title="Contact Me!" noWave={false}>
+    <Layout title="Contact Me!" noWave>
       <Card title="Get in touch">
         <div css={styText}>
           <div dangerouslySetInnerHTML={{ __html: data.description }} />

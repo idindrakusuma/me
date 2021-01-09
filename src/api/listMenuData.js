@@ -1,4 +1,4 @@
-import { FaWordpress, FaComments, FaHeart, FaGrinAlt, FaFileAlt, FaIdCard } from 'react-icons/fa';
+import { FaWordpress, FaComments, FaHeart, FaFileAlt, FaIdCard } from 'react-icons/fa';
 
 const ListMenuData = [
   {
@@ -8,15 +8,6 @@ const ListMenuData = [
     dataTestId: {
       mobile: 'mLinkWelcome',
       desktop: 'dLinkWelcome',
-    },
-  },
-  {
-    href: '/about',
-    name: 'About',
-    icon: FaGrinAlt,
-    dataTestId: {
-      mobile: 'mLinkAbout',
-      desktop: 'dLinkAbout',
     },
   },
   {
